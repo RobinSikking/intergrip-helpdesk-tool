@@ -1,0 +1,19 @@
+{
+  "ignore": [
+    "node_modules"
+  ],
+  "plugins": [
+    [
+      "transform-decorators-legacy",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "transform-class-properties",
+      {
+        "loose": true
+      }
+    ]
+  ]
+}
