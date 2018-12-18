@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html class="h-100">
+<head>
+    <meta charset="utf-8">
+    <title>Intergrip Helpdesk Tool</title>
+    <link rel="stylesheet" href="build/helpdesk.css">
+</head>
+<body class="h-100">
+<div id="intergrip-helpdesk-app" class="h-100"></div>
+<script src="src/vendor/require.js"></script>
+<script>
+    requirejs(['http://api.intergrip.localhost/2019/v2.0/public/routes'], function () {
+        requirejs(['build/bundle.js']);
+    });
+</script>
+</body>
+</html>

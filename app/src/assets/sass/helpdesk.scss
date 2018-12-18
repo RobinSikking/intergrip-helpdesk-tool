@@ -1,0 +1,132 @@
+/**
+ * Fonts
+ */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import '~font-awesome-animation/dist/font-awesome-animation.min.css';
+@import './scrollbar';
+
+@function background-opacity($color, $opacity: 1) {
+  @return rgba($color, $opacity);
+}
+
+/**
+ * Intergrip
+ */
+$intergrip-gray-lightest: #dddddd;
+$intergrip-gray-lighter: #898989;
+$intergrip-gray-light: #7a7a7a;
+$intergrip-gray: #5a5a5a;
+$intergrip-gray-dark: #484848;
+$intergrip-gray-darker: #454545;
+$intergrip-gray-darkest: #424242;
+
+/**
+ * Bootstrap
+ */
+$theme-colors: (
+        "primary": #f99d1c,
+        "danger": #ff4136
+);
+$body-bg: $intergrip-gray;
+$body-color: $intergrip-gray-lightest;
+
+$form-feedback-invalid-color: #f75757;
+
+$input-border-color: $intergrip-gray-darkest;
+$input-bg: $intergrip-gray-darker;
+$input-placeholder-color: $intergrip-gray-light;
+$input-color: $intergrip-gray-lightest;
+$input-focus-border-color: $intergrip-gray-darkest;
+$input-focus-box-shadow: 0;
+$input-group-addon-bg: $intergrip-gray-darker;
+$input-group-addon-color: $intergrip-gray-light;
+
+$yiq-text-dark: $intergrip-gray-darkest;
+$yiq-text-light: $body-color;
+
+$table-border-color: $intergrip-gray-light;
+
+$list-group-bg: background-opacity($intergrip-gray-darker, 0.4);
+$list-group-hover-bg: $intergrip-gray-darker;
+$list-group-action-active-bg: $intergrip-gray-darkest;
+$list-group-action-color: $body-color;
+$list-group-action-hover-color: $body-color;
+$list-group-action-active-color: $body-color;
+
+@import '~bootstrap/scss/bootstrap';
+
+$navigation-max-width: 150px;
+
+/**
+ * Styles
+ */
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family: Ubuntu, $font-family-base;
+}
+
+/**
+ * Bootstrap overrides
+ */
+li.list-group-item-action {
+  cursor: pointer;
+}
+
+/**
+ * Navigation column
+ */
+div.sidebar {
+  max-width: $navigation-max-width;
+  border-right: 1px solid $intergrip-gray;
+  background-color: $intergrip-gray-dark;
+
+  li.logo-container {
+    height: $navigation-max-width;
+  }
+}
+
+div.bottom-shadow {
+  -moz-box-shadow: inset 0 -10px 27px -5px #444;
+  -webkit-box-shadow: inset 0 -10px 27px -5px #444;
+  box-shadow: inset 0 -10px 27px -5px #444;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  height: 25px;
+}
+
+/**
+ * Content column
+ */
+div.content-wrapper {
+  overflow-y: auto;
+
+  img.logo-bg {
+    position: fixed;
+    width: 600px;
+    max-width: 80%;
+    bottom: -180px;
+    right: -100px;
+    z-index: -10;
+    opacity: 0.05;
+  }
+
+  div.form-error-container {
+    margin-top: 2px;
+    height: 18px;
+  }
+
+  div.search {
+    div.row {
+      margin-bottom: 15px;
+    }
+  }
+
+  li.list-group-item {
+    padding: 0.375rem 0.75rem;
+  }
+}
